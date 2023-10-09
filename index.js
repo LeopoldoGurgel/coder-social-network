@@ -11,8 +11,6 @@ const connectionStringURI = `mongodb://127.0.0.1:27017`;
 
 const client = new MongoClient(connectionStringURI);
 
-const db = client.db('coder_sn_DB');
-
 seedDb();
 
 app.use(express.urlencoded({ extended: true }));
