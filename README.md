@@ -1,6 +1,7 @@
 # Coder Social Network
 
-<a hreft="https://drive.google.com/file/d/1eBk_2pSD8cpeDZ0yUC3DjSix6n4ULnRZ/view">Watch the walkthrough video!</a>
+Watch the walkthrough video!
+https://drive.google.com/file/d/1eBk_2pSD8cpeDZ0yUC3DjSix6n4ULnRZ/view
 
 ## DESCRIPTION
 The backend for a social network web app where you can add friends, publish thoughts, react on other user thoughts and argue a lot.
