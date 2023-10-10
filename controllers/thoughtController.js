@@ -1,4 +1,5 @@
-const { Thought, User } = require('../models');
+const User = require('../models/User');
+const Thought = require('../models/Thought');
 
 module.exports = {
   // Function to get all of the thoughts by invoking the find() method with no arguments.

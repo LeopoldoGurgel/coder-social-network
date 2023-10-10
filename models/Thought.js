@@ -1,12 +1,12 @@
 // model for creation of thoughts
 
-const { Schema, model } = require('mongoose'); 
+const { Schema, model, Types } = require('mongoose'); 
 
 
 const reactionSchema = new Schema({
     reactionId: {
-        type: mongoose.Schema.Types.ObjectId,
-        default: () => new mongoose.Types.ObjectId()
+        type: Types.ObjectId,
+        default: () => new Types.ObjectId()
     },
     reactionBody: {
         type: String, 
@@ -14,8 +14,8 @@ const reactionSchema = new Schema({
         maxlength: 280, 
         trim: true
     },
-    username: {
-        type: String,
+    userId: {
+        type: Types.ObjectId,
         required: true
     },
     createdAt: {
@@ -40,7 +40,7 @@ const thoughtSchema = new Schema(
         defaut: Date.now,
         get: (createdAt) => createdAt.toISOString()
     },
-    username: {
+    userId: {
         type: String,
         required: true
     },

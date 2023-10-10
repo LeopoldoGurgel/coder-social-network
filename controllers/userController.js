@@ -1,14 +1,17 @@
 // functions thet will be called on user routes
 
-const { User, Thought } = require('../models');
+const User = require('../models/User');
+const Thought = require('../models/Thought');
 
 module.exports = {
   // Get all users
   async getUsers(req, res) {
     try {
       const users = await User.find();
+      console.log('Get users function triggered')
       res.json(users);
     } catch (err) {
+      console.log(err.message)
       res.status(500).json(err);
     }
   },
@@ -25,6 +28,7 @@ module.exports = {
 
       res.json(user);
     } catch (err) {
+      console.log(err.message)
       res.status(500).json(err);
     }
   },
@@ -32,8 +36,10 @@ module.exports = {
   async createUser(req, res) {
     try {
       const user = await User.create(req.body);
+      console.log("user created")
       res.json(user);
     } catch (err) {
+      console.log(err.message)
       res.status(500).json(err);
     }
   },
@@ -49,6 +55,7 @@ module.exports = {
       await Thought.deleteMany({ _id: { $in: user.thoughts } });
       res.json({ message: 'User and associated thoughts deleted!' })
     } catch (err) {
+      console.log(err.message)
       res.status(500).json(err);
     }
   },
@@ -76,6 +83,7 @@ module.exports = {
 
       res.json(updatedUser)
     }catch(err) {
+      console.log(err.message)
       res.status(500).json(err);
     }
   }, 
@@ -105,6 +113,7 @@ module.exports = {
 
       res.json(updatedUser);
     } catch (err) {
+      console.log(err.message)
       res.status(500).json(err)
     }
   },
@@ -136,6 +145,7 @@ module.exports = {
 
     res.json(updatedUser);
   } catch (err) {
+    console.log(err.message)
     res.status(500).json(err)
   }    
   }

@@ -7,6 +7,11 @@ const { connect, connection} = require('mongoose');
 
 const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/coder_sn_DB';
 
-connect(connectionString);
+try {
+    connect(connectionString);
+    console.log("connected to db")
+}catch(err){
+    console.error("error:", err.message)
+}
 
 module.exports = connection;
