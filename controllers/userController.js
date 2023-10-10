@@ -103,7 +103,7 @@ module.exports = {
         return res.status(404).json({message: `We could not find a user with that id to add as a friend.`})
       }
 
-      if(user.friends.includes(res.params.friendId)) {
+      if(user.friends.includes(req.params.friendId)) {
         return res.status(400).json({message: `${friend.username} is already a friend of ${user.username}.`})
       }
 
