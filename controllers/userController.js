@@ -133,7 +133,7 @@ module.exports = {
       return res.status(404).json({message: `${user.username} has no such friend.`})
     };
 
-    if(!user.friends.includes(res.params.friendId)) {
+    if(!user.friends.includes(req.params.friendId)) {
       return res.status(400).json({message: `${friend.username} and ${user.username} are not friends.`})
     };
 
