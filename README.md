@@ -4,7 +4,7 @@ Watch the walkthrough video!
 https://drive.google.com/file/d/1eBk_2pSD8cpeDZ0yUC3DjSix6n4ULnRZ/view
 
 ## DESCRIPTION
-The backend for a social network web app where you can add friends, publish thoughts, react on other user thoughts and argue a lot.
+The backend for a social network web app built using express API and mongoDB where you can add friends, publish thoughts, react on other user thoughts and argue a lot.
 
 ## TABLE OF CONTENTS
 * [Contributing](#contribution)
